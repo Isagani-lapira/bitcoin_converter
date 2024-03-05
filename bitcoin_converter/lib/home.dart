@@ -1,7 +1,6 @@
 import 'package:bitcoin_converter/service/network.dart';
 import 'package:bitcoin_converter/utilities/const.dart';
 import 'package:bitcoin_converter/widget/androidDropDown.dart';
-import 'package:bitcoin_converter/widget/dropdownentry.dart';
 import 'package:bitcoin_converter/widget/iosDropDown.dart';
 import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
@@ -15,6 +14,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   String value = '';
+  late NetworkHelper helper;
 
   Future getData(String crypto, String currency) async {
     helper = NetworkHelper(assetIDBase: crypto, assetIdQuote: currency);

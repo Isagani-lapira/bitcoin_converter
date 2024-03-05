@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../utilities/const.dart';
-import 'dropdownentry.dart';
 
 class AndroidDropDown extends StatelessWidget {
   const AndroidDropDown({super.key, required this.onSelected});
