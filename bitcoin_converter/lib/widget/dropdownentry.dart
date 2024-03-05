@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../service/network.dart';
 import '../utilities/const.dart';
+late NetworkHelper helper;
+
+
 
 DropdownMenu getAndroidEntry() {
   List<DropdownMenuEntry<String>> entries = [];
@@ -10,7 +14,7 @@ DropdownMenu getAndroidEntry() {
   return DropdownMenu(
     dropdownMenuEntries: entries,
     label: const Text('Currency'),
-    onSelected: (value) => {print(value)},
+    onSelected: (value) => {getData('BTC', value)},
   );
 }
 
@@ -29,4 +33,10 @@ CupertinoPicker getIOSEntry() {
     },
     children: entries,
   );
+}
+
+Future getData(String crypto, String currency) async {
+  helper = NetworkHelper(assetIDBase: crypto, assetIdQuote: currency);
+  var data = await helper.getExchangeRate();
+  print(data[0].rateVal);
 }
