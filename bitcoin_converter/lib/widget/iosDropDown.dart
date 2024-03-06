@@ -1,6 +1,5 @@
 import 'package:bitcoin_converter/utilities/const.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class IOSDropDown extends StatelessWidget {
   const IOSDropDown({super.key, required this.onSelectedItemChanged});
