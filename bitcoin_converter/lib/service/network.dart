@@ -27,7 +27,7 @@ class NetworkHelper {
         cryptoData.add(CryptoData(
           cryptoLabel: data['asset_id_base'],
           currency: data['asset_id_quote'],
-          rateVal: data['rate'].toDouble().toStringAsFixed(5),
+          rateVal: data['rate'].toDouble().toStringAsFixed(3),
         ));
 
         return cryptoData;

@@ -24,3 +24,11 @@ const Map<String, String> kCURRENCIES = {
   "BRL": "Brazilian Real",
   "HKD": "Hong Kong Dollar"
 };
+
+const kCryptoList = [
+  "BTC",
+  "ETH",
+  "BNB",
+  "ADA",
+  "SOL",
+];
